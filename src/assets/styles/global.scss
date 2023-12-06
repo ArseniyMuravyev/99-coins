@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-.light {
-	--main-text-color: #fff;
-	--accent-text-color: #000;
-	--bg-color: #ffdfc4;
-	--button-color: #b4befa;
-	--button-after-color: #5c72fa;
-}
-
-.dark {
-	--main-text-color: #000;
-	--accent-text-color: #fff;
-	--button-color: #ddfffd;
-	--button-after-color: #88fcf6;
-	--bg-color: #18191e;
-} 
+@import 'variables.scss';
 
 .App {
 	@apply flex flex-col h-screen w-full p-3 bg-[var(--bg-color)] text-[var(--main-text-color)] font-[Roboto];

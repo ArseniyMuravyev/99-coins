@@ -1,9 +1,7 @@
 .button {
-	transition: all 250ms ease-in-out;
-	color: #7c7275;
-
+	@apply transition-all duration-300 ease-in-out text-[#7c7275];
+	
 	&:hover {
-	transform: scale(1.15);
-	color: #fff;
+		@apply scale-110 text-white
 	}
 }

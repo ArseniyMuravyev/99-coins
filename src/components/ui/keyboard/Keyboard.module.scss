@@ -1,0 +1,20 @@
+.keyboard {
+	@apply fixed bottom-0 left-0 w-[calc(100%-20px)] h-[35%] flex flex-col gap-4 z-10 bg-[var(--main-text-color)] rounded-3xl mx-[10px] my-[10px] py-[10px] transition-transform duration-1000 ease-in-out;
+}
+
+.keyboard_row {
+	@apply flex justify-center items-center gap-4 h-[25%] relative;
+}
+
+.keyboard_row:not(:nth-last-child(-n + 1))::after {
+	@apply content-[''] absolute bottom-0 left-0 w-full h-[1px] opacity-20
+	bg-gradient-to-r from-transparent via-[var(--accent-text-color)] to-transparent;
+}
+
+.key {
+	@apply flex justify-center items-center text-[var(--accent-text-color)] cursor-pointer w-[33%] h-[100%] transition-all duration-300 opacity-100;
+}
+
+.key:hover {
+	@apply opacity-75;
+}
