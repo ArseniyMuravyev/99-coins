@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import 'variables.scss';
+
+.App {
+	@apply flex flex-col h-screen w-full p-5 bg-[var(--bg-color)] text-[var(--main-text-color)] font-[Roboto];
+}
+
+.button {
+	@apply text-[var(--main-text-color)] rounded-md opacity-80 bg-[var(--button-color)] transition-colors relative overflow-hidden cursor-pointer;
+
+	&::after {
+		@apply content-[''] absolute transition transform duration-500 ease-in-out -translate-x-full w-full h-full bottom-0 left-0 bg-[var(--button-after-color)]
+	}
+
+	&:hover::after {
+		@apply translate-x-0
+	}
+
+	&__text {
+		@apply absolute z-10 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
+	}
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}

@@ -1,0 +1,27 @@
+.slider {
+	@apply flex justify-between gap-4;
+}
+
+.switch {
+	@apply relative inline-block w-14 h-[32px];
+
+	& input {
+		@apply opacity-0 w-0 h-0;
+	}
+}
+
+.span {
+	@apply absolute cursor-pointer inset-0 bg-[#ccc] transition duration-[400ms] rounded-3xl;
+
+	&::before {
+		@apply absolute content-[''] h-[26px] w-[26px] left-[4px] bottom-[3px] bg-[white] transition duration-[400ms] rounded-full;
+	}
+}
+
+input:checked + .span {
+	@apply bg-[#2196f3];
+
+	&::before {
+    @apply translate-x-[22px]
+	}
+}
